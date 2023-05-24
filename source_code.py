@@ -9,7 +9,7 @@ game_exit = False
 
 while not game_exit :
     word = random.choice(hangman_words)
-    print(f"choosen letter is {word}")
+    #print(f"choosen letter is {word}")
 
     blanks = []
     lenght_word = 0
@@ -34,10 +34,11 @@ while not game_exit :
         break
 
     #while not end_of_game:
-    print("new screen")
+    #print("new screen")
     while not end_of_game:
         if lives==6:
             print(stages[7],"\n")
+            print(f"{' '.join(blanks)}\n")
 
         guess = input("Guess a letter: ").lower()
 
